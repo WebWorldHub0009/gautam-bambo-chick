@@ -49,23 +49,55 @@ export default function HeroSection() {
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <img src={slide.img} alt="Bamboo Chick Maker" className="w-full h-screen object-cover" />
+            {/* ✅ Added lazy loading here */}
+            <img
+              src={slide.img}
+              alt="Bamboo Chick Maker"
+              loading="lazy"
+              className="w-full h-screen object-cover"
+            />
             <div className="absolute inset-0 bg-black/60"></div>
 
             {/* Center Content */}
             <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 leading-tight" style={{ color: colors.whitePure, fontFamily: "'Italiana', serif", fontWeight: 700 }}>
-                Gautam <span style={{ color: colors.brightRed, fontFamily: "'Orbitron', sans-serif" }}>Bamboo</span>{" "}
-                <span style={{ color: colors.leafGreen, fontFamily: "'Orbitron', sans-serif" }}>Chick</span> Maker
+              <h1
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 leading-tight"
+                style={{ color: colors.whitePure, fontFamily: "'Italiana', serif", fontWeight: 700 }}
+              >
+                Gautam{" "}
+                <span style={{ color: colors.brightRed, fontFamily: "'Orbitron', sans-serif" }}>
+                  Bamboo
+                </span>{" "}
+                <span style={{ color: colors.leafGreen, fontFamily: "'Orbitron', sans-serif" }}>
+                  Chick
+                </span>{" "}
+                Maker
               </h1>
-              <p className="text-sm sm:text-lg md:text-xl mb-6 max-w-xs sm:max-w-md md:max-w-2xl" style={{ color: colors.whitePure, fontFamily: "'Zen Dots', sans-serif" }}>
+              <p
+                className="text-sm sm:text-lg md:text-xl mb-6 max-w-xs sm:max-w-md md:max-w-2xl"
+                style={{ color: colors.whitePure, fontFamily: "'Zen Dots', sans-serif" }}
+              >
                 Highest Quality Affordable Price — Crafted with tradition, designed for modern living.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="px-6 py-3 rounded-lg font-semibold shadow-lg w-full sm:w-auto" style={{ background: colors.deepBlue, color: colors.whitePure, fontFamily: "'Orbitron', sans-serif" }}>
+                <button
+                  className="px-6 py-3 rounded-lg font-semibold shadow-lg w-full sm:w-auto"
+                  style={{
+                    background: colors.deepBlue,
+                    color: colors.whitePure,
+                    fontFamily: "'Orbitron', sans-serif",
+                  }}
+                >
                   Explore Products
                 </button>
-                <button className="px-6 py-3 rounded-lg font-semibold shadow-lg border w-full sm:w-auto" style={{ borderColor: colors.orangeGold, color: colors.orangeGold, fontFamily: "'Orbitron', sans-serif" }}>
+                <button
+                  className="px-6 py-3 rounded-lg font-semibold shadow-lg border w-full sm:w-auto"
+                  style={{
+                    borderColor: colors.orangeGold,
+                    color: colors.orangeGold,
+                    fontFamily: "'Orbitron', sans-serif",
+                  }}
+                >
                   Contact Us
                 </button>
               </div>
@@ -76,9 +108,24 @@ export default function HeroSection() {
             <div className="hidden md:grid absolute bottom-0 w-full px-16 py-6 grid-cols-4 gap-6 bg-black/70 backdrop-blur text-left">
               {highlights.map((item) => (
                 <div key={item.id}>
-                  <p className="uppercase text-sm mb-2 tracking-wide" style={{ color: colors.orangeGold, fontFamily: "'Orbitron', sans-serif" }}>{item.tag}</p>
-                  <h3 className="text-xl font-bold mb-1" style={{ color: colors.whitePure, fontFamily: "'Italiana', serif" }}>{item.title}</h3>
-                  <p className="text-sm" style={{ color: colors.whitePure, fontFamily: "'Zen Dots', sans-serif" }}>{item.desc}</p>
+                  <p
+                    className="uppercase text-sm mb-2 tracking-wide"
+                    style={{ color: colors.orangeGold, fontFamily: "'Orbitron', sans-serif" }}
+                  >
+                    {item.tag}
+                  </p>
+                  <h3
+                    className="text-xl font-bold mb-1"
+                    style={{ color: colors.whitePure, fontFamily: "'Italiana', serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p
+                    className="text-sm"
+                    style={{ color: colors.whitePure, fontFamily: "'Zen Dots', sans-serif" }}
+                  >
+                    {item.desc}
+                  </p>
                 </div>
               ))}
             </div>
@@ -95,9 +142,24 @@ export default function HeroSection() {
               >
                 {highlights.map((item) => (
                   <SwiperSlide key={item.id} className="bg-black/50 p-4 rounded-lg">
-                    <p className="uppercase text-xs mb-1 tracking-wide" style={{ color: colors.orangeGold, fontFamily: "'Orbitron', sans-serif" }}>{item.tag}</p>
-                    <h3 className="text-lg font-bold mb-1" style={{ color: colors.whitePure, fontFamily: "'Italiana', serif" }}>{item.title}</h3>
-                    <p className="text-xs" style={{ color: colors.whitePure, fontFamily: "'Zen Dots', sans-serif" }}>{item.desc}</p>
+                    <p
+                      className="uppercase text-xs mb-1 tracking-wide"
+                      style={{ color: colors.orangeGold, fontFamily: "'Orbitron', sans-serif" }}
+                    >
+                      {item.tag}
+                    </p>
+                    <h3
+                      className="text-lg font-bold mb-1"
+                      style={{ color: colors.whitePure, fontFamily: "'Italiana', serif" }}
+                    >
+                      {item.title}
+                    </h3>
+                    <p
+                      className="text-xs"
+                      style={{ color: colors.whitePure, fontFamily: "'Zen Dots', sans-serif" }}
+                    >
+                      {item.desc}
+                    </p>
                   </SwiperSlide>
                 ))}
               </Swiper>
@@ -106,10 +168,14 @@ export default function HeroSection() {
         ))}
       </Swiper>
 
-      {/* Social Icons - Vertical on Mobile */}
+      {/* Social Icons */}
       <div className="absolute top-1/2 -translate-y-1/2 left-4 flex flex-col gap-4 z-50 md:flex-col lg:left-6 lg:-translate-x-0">
         {[FaFacebookF, FaInstagram, FaWhatsapp].map((Icon, i) => (
-          <a key={i} href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 border border-blue-800 text-blue-800 hover:bg-white/30 transition">
+          <a
+            key={i}
+            href="#"
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 border border-white text-white hover:bg-white/30 transition"
+          >
             <Icon />
           </a>
         ))}

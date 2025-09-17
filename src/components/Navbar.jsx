@@ -18,24 +18,22 @@ import { Link, useLocation } from "react-router-dom";
 import { MdEmail } from "react-icons/md";
 import logo from "../assets/blogo.png";
 
-// ✅ Color Palette directly inside the file
+// ✅ Color Palette
 const colors = {
-  deepBlue: "#234A8A",     // Roof & Text
-  brightRed: "#E8452D",    // Key & Roof Line
-  leafGreen: "#2BA44A",    // Curtains & Bamboo
-  darkGreen: "#00733B",    // Curtain Lines
-  orangeGold: "#F4A300",   // Curtain Dots
-  blackPure: "#000000",    // Text & Line
-  whitePure: "#FFFFFF",    // Background
+  deepBlue: "#234A8A",
+  brightRed: "#E8452D",
+  leafGreen: "#2BA44A",
+  darkGreen: "#00733B",
+  orangeGold: "#F4A300",
+  blackPure: "#000000",
+  whitePure: "#FFFFFF",
 };
 
-const navItemsLeft = [
+// ✅ Nav Items (all in center now)
+const navItems = [
   { name: "Home", path: "/", icon: <FaHome /> },
   { name: "About", path: "/about", icon: <FaInfoCircle /> },
   { name: "Services", path: "/services", icon: <FaTruckMoving /> },
-];
-
-const navItemsRight = [
   { name: "Gallery", path: "/gallery", icon: <FaEnvelope /> },
   { name: "Contact", path: "/contact", icon: <FaPhoneAlt /> },
 ];
@@ -64,7 +62,6 @@ const ModernNavbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isMenuOpen]);
 
-  // ✅ Nav link styling
   const navLinkStyle = (path) => ({
     display: "flex",
     alignItems: "center",
@@ -102,16 +99,14 @@ const ModernNavbar = () => {
 
           {/* Right side */}
           <div className="flex items-center gap-4 flex-wrap justify-center sm:justify-end">
-            {[ "+919315393747", "+917838788389", ].map(
-              (phone) => (
-                <p key={phone} className="flex items-center gap-1">
-                  <FaPhoneAlt style={{ color: colors.brightRed }} />
-                  <a href={`tel:${phone}`} style={{ color: colors.whitePure }}>
-                    {phone.replace("+91", "+91 ")}
-                  </a>
-                </p>
-              )
-            )}
+            {["+919315393747", "+917838788389"].map((phone) => (
+              <p key={phone} className="flex items-center gap-1">
+                <FaPhoneAlt style={{ color: colors.brightRed }} />
+                <a href={`tel:${phone}`} style={{ color: colors.whitePure }}>
+                  {phone.replace("+91", "+91 ")}
+                </a>
+              </p>
+            ))}
           </div>
         </div>
       </div>
@@ -127,9 +122,18 @@ const ModernNavbar = () => {
         className="w-full px-4 md:px-12"
       >
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          {/* Left Items */}
-          <ul className="hidden md:flex gap-6 text-sm font-medium uppercase">
-            {navItemsLeft.map((item) => (
+          {/* Logo Left */}
+          <Link to="/" className="flex items-center gap-2">
+            <img
+              src={logo}
+              alt="Gautam Bamboo Chick Maker Logo"
+              style={{ height: "70px", width: "auto" }}
+            />
+          </Link>
+
+          {/* Nav Center */}
+          <ul className="hidden md:flex gap-8 text-sm font-medium uppercase">
+            {navItems.map((item) => (
               <li key={item.path}>
                 <Link to={item.path} style={navLinkStyle(item.path)}>
                   {item.icon}
@@ -139,57 +143,34 @@ const ModernNavbar = () => {
             ))}
           </ul>
 
-          {/* Center Brand */}
-          <Link to="/" className="flex items-center gap-2">
-            <img
-              src={logo}
-              alt="Gaurav Bamboo Chick Maker Logo"
-              style={{ height: "80px", width: "auto" }}
-            />
-          </Link>
-
-          {/* Right Items */}
-          <div className="hidden md:flex items-center gap-6">
-            <ul className="flex gap-6 text-sm font-medium uppercase">
-              {navItemsRight.map((item) => (
-                <li key={item.path}>
-                  <Link to={item.path} style={navLinkStyle(item.path)}>
-                    {item.icon}
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            {/* Social */}
-            <div className="flex gap-3 ml-6">
-              {Object.entries(socialLinks).map(([k, url]) => {
-                const Icon =
-                  k === "facebook" ? FaFacebookF : k === "instagram" ? FaInstagram : FaLinkedinIn;
-                return (
-                  <a
-                    key={k}
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      width: "32px",
-                      height: "32px",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      borderRadius: "50%",
-                      backgroundColor: colors.whitePure,
-                      color: colors.deepBlue,
-                      border: `1px solid ${colors.deepBlue}`,
-                      transition: "all 0.3s ease",
-                    }}
-                  >
-                    <Icon size={14} />
-                  </a>
-                );
-              })}
-            </div>
+          {/* Social Right */}
+          <div className="hidden md:flex items-center gap-3">
+            {Object.entries(socialLinks).map(([k, url]) => {
+              const Icon =
+                k === "facebook" ? FaFacebookF : k === "instagram" ? FaInstagram : FaLinkedinIn;
+              return (
+                <a
+                  key={k}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    width: "32px",
+                    height: "32px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    borderRadius: "50%",
+                    backgroundColor: colors.whitePure,
+                    color: colors.deepBlue,
+                    border: `1px solid ${colors.deepBlue}`,
+                    transition: "all 0.3s ease",
+                  }}
+                >
+                  <Icon size={14} />
+                </a>
+              );
+            })}
           </div>
 
           {/* Mobile Toggle */}
@@ -201,7 +182,6 @@ const ModernNavbar = () => {
         {/* 🔹 Mobile Panel */}
         {isMenuOpen && (
           <div className="fixed inset-0 z-50 flex">
-            {/* Slide-out */}
             <div
               ref={panelRef}
               style={{
@@ -214,7 +194,7 @@ const ModernNavbar = () => {
               {/* Mobile brand row */}
               <div className="flex justify-between items-center">
                 <Link to="/" style={{ color: colors.deepBlue, fontWeight: "bold" }}>
-                  Gaurav Bamboo Chick Maker
+                  Gautam Bamboo Chick Maker
                 </Link>
                 <FaTimes
                   style={{ color: colors.blackPure }}
@@ -225,9 +205,9 @@ const ModernNavbar = () => {
 
               <hr className="my-4" />
 
-              {/* Mobile Nav Items */}
+              {/* Mobile Nav */}
               <nav className="flex flex-col gap-3 text-sm">
-                {[...navItemsLeft, ...navItemsRight].map((item) => (
+                {navItems.map((item) => (
                   <Link
                     key={item.path}
                     to={item.path}
@@ -246,7 +226,7 @@ const ModernNavbar = () => {
                 ))}
               </nav>
 
-              {/* Quick WhatsApp */}
+              {/* WhatsApp Button */}
               <div className="mt-6">
                 <a
                   href="https://wa.me/+918178290067"
@@ -269,7 +249,7 @@ const ModernNavbar = () => {
                 </a>
               </div>
 
-              {/* Mobile Social */}
+              {/* Social */}
               <div className="mt-auto pt-4 border-t">
                 <div className="flex gap-3 mt-3">
                   {Object.entries(socialLinks).map(([k, url]) => {

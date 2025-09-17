@@ -106,6 +106,7 @@ export default function About() {
             <img
               src={aboutImg}
               alt="Gautam Bamboo Chick Maker"
+              loading="lazy"   // ✅ Lazy loading added
               className="rounded-lg shadow-xl object-cover w-full md:w-[90%]"
             />
           </div>
@@ -113,15 +114,9 @@ export default function About() {
           {/* Right Column - Info List */}
           <div className="space-y-6">
             <div className="flex items-start gap-4">
-              <FaLeaf
-                className="text-2xl"
-                style={{ color: colors.leafGreen }}
-              />
+              <FaLeaf className="text-2xl" style={{ color: colors.leafGreen }} />
               <div>
-                <p
-                  className="font-semibold"
-                  style={{ color: colors.blackPure }}
-                >
+                <p className="font-semibold" style={{ color: colors.blackPure }}>
                   Eco-Friendly Materials
                 </p>
                 <p style={{ color: "#555" }}>
@@ -131,15 +126,9 @@ export default function About() {
             </div>
 
             <div className="flex items-start gap-4">
-              <FaHammer
-                className="text-2xl"
-                style={{ color: colors.orangeGold }}
-              />
+              <FaHammer className="text-2xl" style={{ color: colors.orangeGold }} />
               <div>
-                <p
-                  className="font-semibold"
-                  style={{ color: colors.blackPure }}
-                >
+                <p className="font-semibold" style={{ color: colors.blackPure }}>
                   Handcrafted Excellence
                 </p>
                 <p style={{ color: "#555" }}>
@@ -149,15 +138,9 @@ export default function About() {
             </div>
 
             <div className="flex items-start gap-4">
-              <FaPaintBrush
-                className="text-2xl"
-                style={{ color: colors.brightRed }}
-              />
+              <FaPaintBrush className="text-2xl" style={{ color: colors.brightRed }} />
               <div>
-                <p
-                  className="font-semibold"
-                  style={{ color: colors.blackPure }}
-                >
+                <p className="font-semibold" style={{ color: colors.blackPure }}>
                   Custom Designs
                 </p>
                 <p style={{ color: "#555" }}>
@@ -167,15 +150,9 @@ export default function About() {
             </div>
 
             <div className="flex items-start gap-4">
-              <FaGlobeAsia
-                className="text-2xl"
-                style={{ color: colors.deepBlue }}
-              />
+              <FaGlobeAsia className="text-2xl" style={{ color: colors.deepBlue }} />
               <div>
-                <p
-                  className="font-semibold"
-                  style={{ color: colors.blackPure }}
-                >
+                <p className="font-semibold" style={{ color: colors.blackPure }}>
                   Pan India Reach
                 </p>
                 <p style={{ color: "#555" }}>
@@ -186,7 +163,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Replaced Badge with Premium Stats */}
+        {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mt-12">
           {[
             { number: "10+", label: "Years of Craftsmanship", color: colors.deepBlue },
@@ -204,13 +181,19 @@ export default function About() {
             >
               <h3
                 className="text-3xl font-bold"
-                style={{ color: stat.color, fontFamily: "'Orbitron', sans-serif" }}
+                style={{
+                  color: stat.color,
+                  fontFamily: "'Orbitron', sans-serif",
+                }}
               >
                 {stat.number}
               </h3>
               <p
                 className="mt-2 text-sm"
-                style={{ color: colors.blackPure, fontFamily: "'Zen Dots', sans-serif" }}
+                style={{
+                  color: colors.blackPure,
+                  fontFamily: "'Zen Dots', sans-serif",
+                }}
               >
                 {stat.label}
               </p>

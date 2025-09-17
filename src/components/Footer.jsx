@@ -178,6 +178,9 @@ export default function Footer() {
             Plot No. 17 Ground Floor, Tech Zone IV, Nearby D-Mart, Amrapali Dream
             Valley, Greater Noida, Uttar Pradesh 201318
           </address>
+          <address className="not-italic leading-relaxed mb-2">
+            Address Shop No. FG8M+464 Ground Floor Swarn Nagari, Block B, Swarn Nagari, Sector 31, Greater Noida, Uttar Pradesh 201315
+          </address>
 
           {["+91 9811367632", "+91 9315393747"].map((num, i) => (
             <p key={i} className="text-sm mb-2 flex items-center gap-2">

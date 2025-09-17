@@ -1,7 +1,6 @@
 // src/components/Product.jsx
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaLeaf } from "react-icons/fa";
 
 import bambooJafhari from "../assets/home/b2.jpg";
 import bg from "../assets/home/sbg.jpg";
@@ -35,14 +34,23 @@ export default function Product() {
       <div className="absolute inset-0 bg-black/50 z-0"></div>
 
       <div className="relative z-10 px-4 max-w-6xl mx-auto">
-        <h2 className="uppercase tracking-wider text-sm font-bold" style={{ color: colors.brightRed }}>
+        <h2
+          className="uppercase tracking-wider text-sm font-bold"
+          style={{ color: colors.brightRed }}
+        >
           Our <span style={{ color: colors.orangeGold }}>Products</span>
         </h2>
-        <h3 className="text-3xl sm:text-5xl font-bold mt-3" style={{ color: colors.whitePure }}>
-          Trusted <span style={{ color: colors.leafGreen }}>Bamboo Solutions</span> by Gautam Bamboo Chick Maker.
+        <h3
+          className="text-3xl sm:text-5xl font-bold mt-3"
+          style={{ color: colors.whitePure }}
+        >
+          Trusted{" "}
+          <span style={{ color: colors.leafGreen }}>Bamboo Solutions</span> by
+          Gautam Bamboo Chick Maker.
         </h3>
         <p className="text-gray-100 max-w-3xl mx-auto mt-5 mb-8">
-          Explore our premium bamboo products designed for durability, functionality, and elegance. Click any product below for full details.
+          Explore our premium bamboo products designed for durability,
+          functionality, and elegance. Click any product below for full details.
         </p>
 
         <div className="flex flex-wrap justify-center gap-8">
@@ -51,16 +59,15 @@ export default function Product() {
               key={idx}
               className="relative bg-white bg-opacity-95 shadow-xl rounded-2xl p-5 w-80 flex flex-col items-center hover:shadow-2xl hover:scale-105 transition-transform duration-500"
             >
-              {/* Image */}
+              {/* Image with lazy loading */}
               {product.imgSrc && (
                 <img
                   src={product.imgSrc}
                   alt={product.title}
+                  loading="lazy"
                   className="w-full h-52 object-cover rounded-xl shadow-md"
                 />
               )}
-
-              
 
               <h4 className="text-lg uppercase font-bold text-gray-800 mt-6">
                 {product.title}
@@ -71,7 +78,9 @@ export default function Product() {
               <Link
                 to={`/products/${product.slug}`}
                 className="px-6 py-2 rounded-full text-whitePure font-semibold"
-                style={{ background: `linear-gradient(90deg, ${colors.deepBlue}, ${colors.darkGreen})` }}
+                style={{
+                  background: `linear-gradient(90deg, ${colors.deepBlue}, ${colors.darkGreen})`,
+                }}
               >
                 Show More
               </Link>
@@ -81,7 +90,11 @@ export default function Product() {
 
         <p className="mt-12 text-gray-100">
           Don’t wait, contact us for more products and inquiries.{" "}
-          <Link to={"/contact"} className="underline font-medium" style={{ color: colors.brightRed }}>
+          <Link
+            to={"/contact"}
+            className="underline font-medium"
+            style={{ color: colors.brightRed }}
+          >
             Book Online
           </Link>
         </p>
