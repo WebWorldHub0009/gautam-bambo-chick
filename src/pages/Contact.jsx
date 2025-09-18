@@ -1,6 +1,6 @@
 // src/pages/Contact.jsx
 import React, { useState, useEffect } from "react";
-// import ContactHero from "../components/ContactHero";
+import ContactHero from "../components/ContactHero";
 import {
   FaFacebookF,
   FaInstagram,
@@ -39,7 +39,7 @@ const Contact = () => {
 
   return (
     <>
-      {/* <ContactHero /> */}
+      <ContactHero />
 
       {/* Contact Section */}
       <section className="w-full min-h-screen flex flex-col lg:flex-row bg-[#F7F5F2] text-[#1C1C1C] mt-1 font-[Raleway]">
