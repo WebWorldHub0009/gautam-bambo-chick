@@ -39,9 +39,9 @@ const navItems = [
 ];
 
 const socialLinks = {
-  facebook: "https://www.facebook.com/",
-  instagram: "https://www.instagram.com",
-  linkedin: "https://www.linkedin.com",
+  facebook: "https://www.facebook.com/Gautambamboochickmaker",
+  instagram: "https://www.instagram.com/gautambamboochickmaker/",
+  linkedin: "https://www.linkedin.com/in/gautambamboochickmaker/",
 };
 
 const ModernNavbar = () => {
@@ -88,12 +88,12 @@ const ModernNavbar = () => {
             <p className="flex items-center gap-1">
               <FaIdBadge style={{ color: colors.orangeGold }} />
               <a href="#" style={{ color: colors.whitePure }}>
-                UDYAM: ***********
+                UP-28-0178874
               </a>
             </p>
             <p className="flex items-center gap-1">
               <MdEmail style={{ color: colors.orangeGold }} />
-              <span>GSTIN: **************</span>
+              <span>NCS ID:- E20I72-2318235108616</span>
             </p>
           </div>
 

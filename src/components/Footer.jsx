@@ -125,9 +125,9 @@ export default function Footer() {
             Business Info
           </h4>
           <ul className="space-y-2 text-whitePure">
-            <li>UDYAM: **********</li>
-            <li>GSTIN: **********</li>
-            <li>License No: **********</li>
+            <li>UDYAM:   UP-28-0178874</li>
+            <li>NCS ID:- E20I72-2318235108616</li>
+           
           </ul>
         </div>
 
