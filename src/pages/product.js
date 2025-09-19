@@ -1,6 +1,10 @@
 // src/data/products.js
-
-import bambooJafhari from "../assets/home/b3.jpg"; 
+import bambooJafhari from "../assets/product/jaf.jpg";
+import dwali from "../assets/product/dchick.jpg"
+import kabutar from "../assets/product/pigeon.jpg"
+import roller from "../assets/product/pigeon.jpg"
+import bambo from "../assets/product/hut.jpg"
+import fchick from "../assets/product/fchick.jpg"
 // 👉 Update image paths accordingly for each product
 
 const products = [
@@ -37,7 +41,7 @@ const products = [
   {
     title: "Design Wali Chick",
     slug: "design-wali-chick",
-    imgSrc: bambooJafhari,
+    imgSrc: dwali,
     heading: "Elegance in Every Weave – Design Wali Chick",
     quote: "Where tradition meets artistry.",
     description: `Our Design Wali Chick is a masterpiece of craftsmanship and artistry. 
@@ -66,7 +70,7 @@ const products = [
   {
     title: "Kabutar Jali",
     slug: "kabutar-jali",
-    imgSrc: bambooJafhari,
+    imgSrc: kabutar,
     heading: "Protection with Purpose – Premium Kabutar Jali",
     quote: "Secure your space while keeping nature close.",
     description: `The Kabutar Jali is more than just a protective barrier – it is a combination of 
@@ -95,7 +99,7 @@ const products = [
   {
     title: "Roller Blind",
     slug: "roller-blind",
-    imgSrc: bambooJafhari,
+    imgSrc: roller,
     heading: "Smooth Functionality – Bamboo Roller Blinds",
     quote: "Effortless style, everyday comfort.",
     description: `Our Bamboo Roller Blinds are the epitome of functional luxury. Designed with smooth 
@@ -123,7 +127,7 @@ const products = [
   {
     title: "Bamboo Huts",
     slug: "bamboo-huts",
-    imgSrc: bambooJafhari,
+    imgSrc: bambo,
     heading: "Nature’s Shelter – Handcrafted Bamboo Huts",
     quote: "Reconnect with simplicity and sustainability.",
     description: `Our Bamboo Huts are designed to bring you closer to nature. Each hut is handcrafted 
@@ -151,7 +155,7 @@ const products = [
   {
     title: "Bird Net & Fancy Chick Maker",
     slug: "bird-net-fancy-chick-maker",
-    imgSrc: bambooJafhari,
+    imgSrc: fchick,
     heading: "Secure & Stylish – Bird Net and Fancy Chick Maker",
     quote: "Safety with elegance, crafted in bamboo.",
     description: `Our Bird Nets and Fancy Chick Makers combine security with aesthetics. Designed 

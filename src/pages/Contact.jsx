@@ -94,25 +94,31 @@ const Contact = () => {
               <p>✉️ info@gautambamboochickmaker.in</p>
             </div>
 
-            <div>
-              <h4
-                className="font-semibold mb-1"
-                style={{ color: colors.orangeGold }}
-              >
-                Office Address
-              </h4>
-              <p className="leading-relaxed font-Orbitron">
-                Plot No. 17, Ground Floor, Tech Zone IV, <br />
-                Nearby D-Mart, Amrapali Dream Valley, <br />
-                Greater Noida, Uttar Pradesh - 201318
-              </p>
-              {/* 🆕 Added New Address */}
-              <p className="leading-relaxed font-Orbitron mt-4">
-                Shop No. FG8M+464, Ground Floor, Swarn Nagari, <br />
-                Block B, Swarn Nagari, Sector 31, <br />
-                Greater Noida, Uttar Pradesh - 201315
-              </p>
-            </div>
+          <div>
+  <h4
+    className="font-semibold mb-4"
+    style={{ color: colors.orangeGold }}
+  >
+    Office Addresses
+  </h4>
+
+  <p className="leading-relaxed font-Orbitron mt-2">
+    Address: JC2W+CHM, Tech Zone IV, Amrapali Dream Valley, Ithaira, Greater Noida, Uttar Pradesh - 201318
+  </p>
+
+  <p className="leading-relaxed font-Orbitron mt-2">
+    Address: Shop No. B - 36, 37, Second Floor, Gali No. 06, Rajput Colony, Hindon Vihar, Baraula, Sector 49, Noida, Uttar Pradesh - 201307
+  </p>
+
+  <p className="leading-relaxed font-Orbitron mt-2">
+    Address: Shop No. FG8M+464, Ground Floor, Swarn Nagari, Block B, Swarn Nagari, Sector 31, Greater Noida, Uttar Pradesh - 201315
+  </p>
+
+  <p className="leading-relaxed font-Orbitron mt-2">
+    Address: Shop No. 15, First Floor, Near Arihant Ambar, Sector 1, Aimnabad, Bisrakh Jalalpur, Noida, Greater Noida, Uttar Pradesh - 201318
+  </p>
+</div>
+
           </div>
 
           {/* Social Icons */}

@@ -15,23 +15,30 @@ const colors = {
 const locations = [
   {
     title: "Head Office",
-    iframe: "https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d112094.62653457954!2d77.36401489174236!3d28.601064395980647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x390cef005e960105%3A0x9db5f1e0c899c84!2sJC2W%2BCHM%2C%20Tech%20Zone%20IV%2C%20Amrapali%20Dream%20Valley%2C%20Ithaira%2C%20Greater%20Noida%2C%20Uttar%20Pradesh%20201318!3m2!1d28.601089299999998!2d77.4464163!5e0!3m2!1sen!2sin!4v1758251364815!5m2!1sen!2sin",
-    address: "Plot No. 17, Tech Zone IV, Amrapali Dream Valley, Greater Noida, UP - 201318",
-    link: "https://goo.gl/maps/Q6eNRYBRM2L2",
-  },
-  {
-    title: "Workshop",
-    iframe: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28058.211244035116!2d77.5144408!3d28.4712214!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cc1006bfb0d9f%3A0x7ea863c28c72ce4!2sBamboo%20Chick%20maker!5e0!3m2!1sen!2sin!4v1758254399480!5m2!1sen!2sin",
-    address: "Sector 63, Noida, Uttar Pradesh - 201301",
-    link: "https://goo.gl/maps/abcd1234",
+    iframe: "https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d112094.62845467823!2d77.36402049174231!3d28.601062595981663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x390cef005e960105%3A0x9db5f1e0c899c84!2sGround%20Floor%2C%20Plot%20No.%2017%2C%20Tech%20Zone%20IV%2C%20Amrapali%20Dream%20Valley%2C%20Ithaira%2C%20Greater%20Noida%2C%20Uttar%20Pradesh%20201318!3m2!1d28.6010875!2d77.44642189999999!5e0!3m2!1sen!2sin!4v1758273531674!5m2!1sen!2sin",
+    address: "JC2W+CHM, Tech Zone IV, Amrapali Dream Valley, Ithaira, Greater Noida, Uttar Pradesh - 201318",
+    link: "https://share.google/lqbbWsBV8wbIwbNyl",
   },
   {
     title: "Branch Office",
-    iframe: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14013.92823213425!2d77.43053755!3d28.60104415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceffb4d43d88d%3A0xb46e9184160a95c4!2sTechzone%204%2C%20Greater%20Noida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1726310782732!5m2!1sen!2sin",
-    address: "Techzone 4, Greater Noida West, UP - 201318",
-    link: "https://goo.gl/maps/xyz5678",
+    iframe: "https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d112140.03926906537!2d77.29418349009339!3d28.55846311987194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x390ce58327536053%3A0x25494a4d4e893c93!2sShop%20No%2C%20B%20-%2036%2C%2037%2C%20Second%20floor%20%2C%20Gali%20no%20%2C%2006%2C%20Rajput%20Colony%2C%20Hindon%20Vihar%2C%20Baraula%2C%20Sector%2049%2C%20Noida%2C%20Uttar%20Pradesh%20201307!3m2!1d28.558487999999997!2d77.3765849!5e0!3m2!1sen!2sin!4v1758273737581!5m2!1sen!2sin",
+    address: "Shop No. B - 36, 37, Second Floor, Gali No. 06, Rajput Colony, Hindon Vihar, Baraula, Sector 49, Noida, Uttar Pradesh - 201307",
+    link: "https://share.google/P8RSHPQrx3eM8Bofl",
+  },
+  {
+    title: "Branch Office 2",
+    iframe: "https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d56070.220622309374!2d77.39932724578784!3d28.558085770417886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x390cef9e4857bc2d%3A0x64cb9cafea0874b5!2sShop%20No.%2015%2C%20Rudra%20Bamboo%20chick%20Maker%2C%20Fist%20Floor%2C%20near%20Arihant%20Ambar%2C%20Sector%201%2C%20Aimnabad%2C%20Bisrakh%20Jalalpur%2C%20Noida%2C%20Greater%20Noida%2C%20Uttar%20Pradesh%20201318!3m2!1d28.5580166!2d77.44052719999999!5e0!3m2!1sen!2sin!4v1758273825675!5m2!1sen!2sin",
+    address: "Shop No. 15, First Floor, near Arihant Ambar, Sector 1, Aimnabad, Bisrakh Jalalpur, Noida, Greater Noida, Uttar Pradesh - 201318",
+    link: "https://share.google/oFScKOgR2cAdmLqPj",
+  },
+  {
+    title: "Workshop",
+    iframe: "https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d28058.211244035116!2d77.5144408!3d28.4712214!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x390cc1006bfb0d9f%3A0x7ea863c28c72ce4!2sFG8M%2B464%20Bamboo%20Chick%20maker%2C%20Swarn%20Nagari%2C%20Block%20B%2C%20Swarn%20Nagari%2C%20Sector%2031%2C%20Greater%20Noida%2C%20Uttar%20Pradesh%20201315!3m2!1d28.4652653!2d77.5330881!5e0!3m2!1sen!2sin!4v1758273867184!5m2!1sen!2sin",
+    address: "Shop No. FG8M+464, Ground Floor, Swarn Nagari, Block B, Swarn Nagari, Sector 31, Greater Noida, Uttar Pradesh - 201315",
+    link: "https://maps.app.goo.gl/Q855xtbpJotjX16Q7",
   },
 ];
+
 
 const MapSection = () => {
   return (
@@ -48,7 +55,7 @@ const MapSection = () => {
       </div>
 
       {/* Grid of Maps */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto px-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-6">
         {locations.map((loc, index) => (
           <div
             key={index}

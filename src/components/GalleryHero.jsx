@@ -1,6 +1,6 @@
 // src/components/GalleryHero.jsx
 import React, { useState, useEffect } from "react";
-import bg from "../assets/home/b1.jpg";
+import bg from "../assets/product/hut.jpg";
 import { Link } from "react-router-dom";
 
 const colors = {

@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ModernNavbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import FloatingButtons from "./components/FloatingButtons";
+import CertificatePage from "./pages/Certificates";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 // ✅ Global LazyImage Component
 export const LazyImage = ({ src, alt, className = "", ...rest }) => (
@@ -31,6 +33,8 @@ const App = () => {
           <Route path="/products/:slug" element={<ProductDetail />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/certificates" element={<CertificatePage />} />
+          <Route path="/privacy&policy" element={<PrivacyPolicy />} />
         </Routes>
       </Suspense>
 

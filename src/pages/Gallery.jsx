@@ -24,6 +24,19 @@ import img17 from "../assets/gallery/g17.jpg";
 import img18 from "../assets/gallery/g18.jpg";
 // import img19 from "../assets/gallery/g19.jpg";
 import img20 from "../assets/gallery/g20.jpg";
+
+
+import img21 from "../assets/product/about.jpg";
+import img22 from "../assets/product/contact.jpg";
+import img23 from "../assets/product/dchick.jpg";
+import img24 from "../assets/product/fchick.jpg";
+import img25 from "../assets/product/hut.jpg";
+import img26 from "../assets/product/jaf.jpg";
+
+import img27 from "../assets/product/pigeon.jpg";
+import img28 from "../assets/product/product.jpg";
+import img29 from "../assets/product/roller.jpg";
+
 import GalleryHero from "../components/GalleryHero";
 
 // Colors
@@ -59,10 +72,30 @@ const media = [
   { src: img18 },
   // { src: img19 },
   { src: img20 },
+
+  { src: img21 },
+  { src: img22 },
+  { src: img23 },
+  { src: img24 },
+  { src: img25 },
+  { src: img26 },
+  { src: img27 },
+  { src: img28 },
+  { src: img29 },
 ];
 
 // Grid spans
 const gridStyles = [
+  "sm:col-span-2 sm:row-span-1",
+  "sm:col-span-2 sm:row-span-1",
+  "sm:col-span-2 sm:row-span-1",
+  "sm:col-span-2 sm:row-span-1",
+  "sm:col-span-4 sm:row-span-1",
+  "sm:col-span-2 sm:row-span-1",
+  "sm:col-span-2 sm:row-span-1",
+  "sm:col-span-2 sm:row-span-1",
+  "sm:col-span-3 sm:row-span-1",
+  "sm:col-span-3 sm:row-span-1",
   "sm:col-span-2 sm:row-span-1",
   "sm:col-span-2 sm:row-span-1",
   "sm:col-span-2 sm:row-span-1",

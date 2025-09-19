@@ -10,6 +10,7 @@ import {
   FaTruckMoving,
   FaCertificate,
   FaContao,
+  FaOldRepublic,
 } from "react-icons/fa";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -108,7 +109,8 @@ export default function Footer() {
               ["About Us", "/about", <FaInfoCircle />],
               ["Products", "/products", <FaTruckMoving />],
               ["Contact Us", "/contact", <FaContao />],
-              ["Certificates", "/certificate", <FaCertificate />],
+              ["Certificates", "/certificates", <FaCertificate />],
+              ["Privacy & Policy", "/privacy&policy", <FaOldRepublic />],
             ].map(([text, link, icon], i) => (
               <li key={i}>
                 <Link

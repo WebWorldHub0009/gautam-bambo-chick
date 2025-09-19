@@ -13,6 +13,7 @@ import {
   FaEnvelope,
   FaWhatsapp,
   FaIdBadge,
+  FaCertificate,
 } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { MdEmail } from "react-icons/md";
@@ -36,6 +37,7 @@ const navItems = [
   { name: "Products", path: "/products", icon: <FaTruckMoving /> },
   { name: "Gallery", path: "/gallery", icon: <FaEnvelope /> },
   { name: "Contact", path: "/contact", icon: <FaPhoneAlt /> },
+  { name: "Certificates", path: "/certificates", icon: <FaCertificate /> },
 ];
 
 const socialLinks = {
@@ -81,34 +83,32 @@ const ModernNavbar = () => {
           background: `linear-gradient(to right, ${colors.deepBlue}, ${colors.leafGreen}, ${colors.deepBlue})`,
           color: colors.whitePure,
         }}
-      >
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between py-1 px-4 text-xs md:text-sm gap-2 sm:gap-0">
-          {/* Left side */}
-          <div className="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
-            <p className="flex items-center gap-1">
-              <FaIdBadge style={{ color: colors.orangeGold }} />
-              <a href="#" style={{ color: colors.whitePure }}>
-               UDYAM-UP-28-0178874
-              </a>
-            </p>
-            <p className="flex items-center gap-1">
-              <MdEmail style={{ color: colors.orangeGold }} />
-              <span>NCS ID:- E20I72-2318235108616</span>
-            </p>
-          </div>
+      ><div className="flex flex-col sm:flex-row items-center justify-between px-4 py-1 text-xs md:text-sm gap-2 sm:gap-0">
+  {/* Mobile View: UDYAM left, NCS right (first row) */}
+  <div className="flex justify-between w-full sm:w-auto mb-1 sm:mb-0">
+    <p className="flex items-center gap-1 text-[10px] sm:text-sm">
+      <FaIdBadge style={{ color: colors.orangeGold }} />
+      <span style={{ color: colors.whitePure }}>UDYAMUP-28-0178874</span>
+    </p>
+    <p className="flex items-center gap-1 text-[10px] sm:text-sm">
+      <MdEmail style={{ color: colors.orangeGold }} />
+      <span style={{ color: colors.whitePure }}>NCS ID:- E20I72-2318235108616</span>
+    </p>
+  </div>
 
-          {/* Right side */}
-          <div className="flex items-center gap-4 flex-wrap justify-center sm:justify-end">
-            {["+919315393747", "+917838788389"].map((phone) => (
-              <p key={phone} className="flex items-center gap-1">
-                <FaPhoneAlt style={{ color: colors.brightRed }} />
-                <a href={`tel:${phone}`} style={{ color: colors.whitePure }}>
-                  {phone.replace("+91", "+91 ")}
-                </a>
-              </p>
-            ))}
-          </div>
-        </div>
+  {/* Mobile View: Phones left/right (second row) */}
+  <div className="flex justify-between w-full sm:w-auto">
+    {["+919315393747", "+917838788389"].map((phone, idx) => (
+      <p key={idx} className="flex items-center gap-1 text-[10px] sm:text-sm">
+        <FaPhoneAlt style={{ color: colors.brightRed }} />
+        <a href={`tel:${phone}`} style={{ color: colors.whitePure }}>
+          {phone.replace("+91", "+91 ")}
+        </a>
+      </p>
+    ))}
+  </div>
+</div>
+
       </div>
 
       {/* 🔹 Main Navbar */}

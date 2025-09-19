@@ -2,7 +2,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import bambooJafhari from "../assets/home/b2.jpg";
+import bambooJafhari from "../assets/product/jaf.jpg";
+import dwali from "../assets/product/dchick.jpg"
+import kabutar from "../assets/product/pigeon.jpg"
+import roller from "../assets/product/pigeon.jpg"
+import bambo from "../assets/product/hut.jpg"
+import fchick from "../assets/product/fchick.jpg"
 import bg from "../assets/home/sbg.jpg";
 
 const colors = {
@@ -17,11 +22,11 @@ const colors = {
 
 const products = [
   { title: "Bamboo Jafhari", slug: "bamboo-jafhari", imgSrc: bambooJafhari, description: "High-quality bamboo jafhari for strong and durable construction." },
-  { title: "Design Wali Chick", slug: "design-wali-chick", imgSrc: bambooJafhari, description: "Elegant design wali chick to enhance aesthetics and functionality." },
-  { title: "Kabutar Jali", slug: "kabutar-jali", imgSrc: bambooJafhari, description: "Premium kabutar jali to protect your poultry while ensuring ventilation." },
-  { title: "Roller Blind", slug: "roller-blind", imgSrc: bambooJafhari, description: "Durable roller blinds for versatile and efficient shading solutions." },
-  { title: "Bamboo Huts", slug: "bamboo-huts", imgSrc: bambooJafhari, description: "Sturdy bamboo huts perfect for outdoor setups and farm usage." },
-  { title: "Bird Net & Fancy Chick Maker", slug: "bird-net-fancy-chick-maker", imgSrc: bambooJafhari, description: "Eco-friendly bird nets and fancy chick makers for secure and organized farming." },
+  { title: "Design Wali Chick", slug: "design-wali-chick", imgSrc: dwali, description: "Elegant design wali chick to enhance aesthetics and functionality." },
+  { title: "Kabutar Jali", slug: "kabutar-jali", imgSrc: kabutar, description: "Premium kabutar jali to protect your poultry while ensuring ventilation." },
+  { title: "Roller Blind", slug: "roller-blind", imgSrc: roller, description: "Durable roller blinds for versatile and efficient shading solutions." },
+  { title: "Bamboo Huts", slug: "bamboo-huts", imgSrc: bambo, description: "Sturdy bamboo huts perfect for outdoor setups and farm usage." },
+  { title: "Bird Net & Fancy Chick Maker", slug: "bird-net-fancy-chick-maker", imgSrc: fchick, description: "Eco-friendly bird nets and fancy chick makers for secure and organized farming." },
 ];
 
 export default function Product() {

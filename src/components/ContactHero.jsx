@@ -1,6 +1,6 @@
 // src/components/ContactHero.jsx
 import React from "react";
-import bg from "../assets/home/b2.jpg"; // static import
+import bg from "../assets/product/contact.jpg"; // static import
 
 const colors = {
   deepBlue: "#234A8A",
