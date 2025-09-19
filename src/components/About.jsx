@@ -1,8 +1,15 @@
 // src/components/About.jsx
 import React from "react";
 import { FaLeaf, FaHammer, FaPaintBrush, FaGlobeAsia } from "react-icons/fa";
-import aboutImg from "../assets/home/b3.jpg";
+import aboutImg1 from "../assets/product/b1.jpg";
+import aboutImg2 from "../assets/product/b2.jpg";
+import aboutImg3 from "../assets/product/b3.jpg";
+import aboutImg4 from "../assets/product/b4.jpg";
 import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const colors = {
   deepBlue: "#234A8A",
@@ -41,6 +48,9 @@ const stats = [
   { number: "100%", label: "Customer Satisfaction", color: "#2BA44A" },
   { number: "Pan India", label: "Trusted Presence", color: "#F4A300" },
 ];
+
+// ✅ Slider images
+const aboutSlider = [aboutImg1, aboutImg2, aboutImg3,aboutImg4];
 
 export default function About() {
   return (
@@ -84,15 +94,29 @@ export default function About() {
             </Link>
           </div>
 
-          {/* Middle (Image) */}
+          {/* Middle (Image Slider) */}
           <div className="flex justify-center">
-            <img
-              src={aboutImg}
-              alt="Gautam Bamboo Chick Maker"
-              loading="lazy"
-              decoding="async"
-              className="rounded-lg shadow-xl object-cover w-full md:w-[90%]"
-            />
+            <Swiper
+              spaceBetween={20}
+              slidesPerView={1}
+              loop
+              autoplay={{ delay: 2500, disableOnInteraction: false }}
+              pagination={{ clickable: true }}
+              modules={[Autoplay, Pagination]}
+              className="w-full md:w-[90%] rounded-lg shadow-xl"
+            >
+              {aboutSlider.map((img, i) => (
+                <SwiperSlide key={i}>
+                  <img
+                    src={img}
+                    alt={`About Slide ${i + 1}`}
+                    loading="lazy"
+                    decoding="async"
+                    className="rounded-lg shadow-xl object-cover w-full h-[350px] md:h-[420px]"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
 
           {/* Right (Features) */}

@@ -5,6 +5,8 @@ import Footer from "./components/Footer";
 import FloatingButtons from "./components/FloatingButtons";
 import CertificatePage from "./pages/Certificates";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermAndConditions";
+import ScrollToTop from "./components/ScrollToTop";
 
 // ✅ Global LazyImage Component
 export const LazyImage = ({ src, alt, className = "", ...rest }) => (
@@ -22,10 +24,12 @@ const Contact = lazy(() => import("./pages/Contact"));
 const App = () => {
   return (
     <BrowserRouter>
+    <ScrollToTop/>
       <ModernNavbar />
 
       {/* Suspense wrapper shows fallback while pages load */}
       <Suspense fallback={<div className="text-center py-20 text-xl text-gray-700">Loading...</div>}>
+       
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -35,6 +39,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/certificates" element={<CertificatePage />} />
           <Route path="/privacy&policy" element={<PrivacyPolicy />} />
+           <Route path="/term&condition" element={<TermsAndConditions />} />
         </Routes>
       </Suspense>
 

@@ -4,6 +4,7 @@ import FeaturedSection from '../components/FeaturedSection'
 import StatsSection from '../components/StatsCounter'
 import Testimonials from "../components/Testimonials"
 import VisionMission from '../components/VissionMission'
+import OurTeam from '../components/OurTeam'
 
 const About = () => {
   return (
@@ -12,6 +13,7 @@ const About = () => {
    <FeaturedSection/>
    <StatsSection/>
    <VisionMission/>
+   <OurTeam/>
    <Testimonials/>
 
    </>

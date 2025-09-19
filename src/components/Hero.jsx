@@ -17,6 +17,8 @@ import img1 from "../assets/home/b1.jpg";
 import img2 from "../assets/home/b2.jpg";
 import img3 from "../assets/home/b3.jpg";
 import img4 from "../assets/home/b4.jpg";
+import img5 from "../assets/product/d1.jpg";
+import img6 from "../assets/product/d2.jpg";
 import { Link } from "react-router-dom";
 
 const colors = {
@@ -34,6 +36,8 @@ const slides = [
   { id: 2, img: img2 },
   { id: 3, img: img3 },
   { id: 4, img: img4 },
+  { id: 5, img: img5 },
+  { id: 6, img: img6 },
 ];
 
 const highlights = [

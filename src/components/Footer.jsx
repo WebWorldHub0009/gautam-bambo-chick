@@ -11,12 +11,14 @@ import {
   FaCertificate,
   FaContao,
   FaOldRepublic,
+  FaTerminal,
 } from "react-icons/fa";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import VisitorCounter from "./VisitorCounter";
 import Translator from "./Translator";
-import bgFooter from "../assets/home/a.jpg"; // Add a professional footer background image
+import bgFooter from "../assets/home/a.jpg"; 
+import logo from "../assets/blogo.png"; // ✅ Add your logo file here
 
 const colors = {
   deepBlue: "#234A8A",
@@ -48,14 +50,20 @@ export default function Footer() {
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{ backgroundImage: `url(${bgFooter})` }}
       />
-      {/* Overlay */}
       <div className="absolute inset-0 z-0" />
 
       <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
         {/* About Section */}
         <div className="flex flex-col space-y-4">
+          {/* ✅ Logo Above Name */}
+          <img
+            src={logo}
+            alt="Gautam Bamboo Chick Maker Logo"
+            className="w-30 md:w-34 mb-2"
+          />
+
           <p
-            className="text-3xl md:text-5xl font-bold tracking-wide"
+            className="text-3xl md:text-4xl font-bold tracking-wide"
             style={{ color: colors.leafGreen, fontFamily: "'Italiana', serif" }}
           >
             Gautam Bamboo Chick Maker
@@ -87,20 +95,25 @@ export default function Footer() {
             ))}
           </div>
 
-          {/* Email Button */}
+          {/* ✅ Webmail Button */}
           <div className="mt-4">
             <a
-              href="mailto:gautambamboochickmaker@gmail.com"
+              href="https://md-in-82.webhostbox.net:2096/cpsess3927650103/3rdparty/roundcube/?_task=mail&_mbox=INBOX"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-leafGreen text-blackPure px-4 py-2 rounded-lg font-semibold hover:bg-orangeGold transition duration-300 shadow-md"
             >
-              <FaEnvelope /> Email Us
+              <FaEnvelope /> Webmail 
             </a>
           </div>
         </div>
 
         {/* Quick Links */}
         <div>
-          <h4 className="text-3xl font-semibold mb-4" style={{ color: colors.deepBlue, fontFamily: "'Italiana', serif" }}>
+          <h4
+            className="text-3xl font-semibold mb-4"
+            style={{ color: colors.deepBlue, fontFamily: "'Italiana', serif" }}
+          >
             Quick Links
           </h4>
           <ul className="space-y-3">
@@ -111,6 +124,7 @@ export default function Footer() {
               ["Contact Us", "/contact", <FaContao />],
               ["Certificates", "/certificates", <FaCertificate />],
               ["Privacy & Policy", "/privacy&policy", <FaOldRepublic />],
+              ["Terms & Condition", "/term&condition", <FaTerminal />],
             ].map(([text, link, icon], i) => (
               <li key={i}>
                 <Link
@@ -123,19 +137,24 @@ export default function Footer() {
             ))}
           </ul>
 
-          <h4 className="text-3xl font-semibold mt-6 mb-2" style={{ color: colors.deepBlue, fontFamily: "'Italiana', serif" }}>
+          <h4
+            className="text-3xl font-semibold mt-6 mb-2"
+            style={{ color: colors.deepBlue, fontFamily: "'Italiana', serif" }}
+          >
             Business Info
           </h4>
           <ul className="space-y-2 text-whitePure">
-            <li>UDYAM:   UP-28-0178874</li>
-            <li>NCS ID:- E20I72-2318235108616</li>
-           
+            <li>UDYAM: UP-28-0178874</li>
+            <li>NCS ID: E20I72-2318235108616</li>
           </ul>
         </div>
 
         {/* Products Section */}
         <div>
-          <h4 className="text-3xl font-semibold mb-4" style={{ color: colors.deepBlue, fontFamily: "'Italiana', serif" }}>
+          <h4
+            className="text-3xl font-semibold mb-4"
+            style={{ color: colors.deepBlue, fontFamily: "'Italiana', serif" }}
+          >
             Products
           </h4>
           <ul className="space-y-3">
@@ -154,7 +173,13 @@ export default function Footer() {
 
           {/* Emails */}
           <div className="mt-6">
-            <h5 className="text-3xl font-semibold mb-2" style={{ color: colors.orangeGold,fontFamily: "'Italiana', serif" }}>
+            <h5
+              className="text-3xl font-semibold mb-2"
+              style={{
+                color: colors.orangeGold,
+                fontFamily: "'Italiana', serif",
+              }}
+            >
               Email
             </h5>
             {[
@@ -163,7 +188,10 @@ export default function Footer() {
             ].map((email, i) => (
               <p key={i} className="text-sm mb-2 flex items-center gap-2">
                 <FaEnvelope style={{ color: colors.leafGreen }} />
-                <a href={`mailto:${email}`} className="hover:text-leafGreen transition duration-300">
+                <a
+                  href={`mailto:${email}`}
+                  className="hover:text-leafGreen transition duration-300"
+                >
                   {email}
                 </a>
               </p>
@@ -173,28 +201,36 @@ export default function Footer() {
 
         {/* Contact Info */}
         <div>
-          <h4 className="text-3xl font-semibold mb-4" style={{ color: colors.deepBlue, fontFamily: "'Italiana', serif" }}>
+          <h4
+            className="text-3xl font-semibold mb-4"
+            style={{ color: colors.deepBlue, fontFamily: "'Italiana', serif" }}
+          >
             Contact Info
           </h4>
           <address className="not-italic leading-relaxed mb-4">
-            Plot No. 17 Ground Floor, Tech Zone IV, Nearby D-Mart, Amrapali Dream
-            Valley, Greater Noida, Uttar Pradesh 201318
+            Plot No. 17 Ground Floor, Tech Zone IV, Nearby D-Mart, Amrapali
+            Dream Valley, Greater Noida, Uttar Pradesh 201318
           </address>
           <address className="not-italic leading-relaxed mb-2">
-            Address Shop No. FG8M+464 Ground Floor Swarn Nagari, Block B, Swarn Nagari, Sector 31, Greater Noida, Uttar Pradesh 201315
+            Shop No. FG8M+464 Ground Floor Swarn Nagari, Block B, Swarn Nagari,
+            Sector 31, Greater Noida, Uttar Pradesh 201315
           </address>
 
           {["+91 9811367632", "+91 9315393747"].map((num, i) => (
             <p key={i} className="text-sm mb-2 flex items-center gap-2">
               <FaPhoneAlt style={{ color: colors.leafGreen }} />
-              <a href={`tel:${num.replace(/\s/g, "")}`} className="hover:text-leafGreen transition duration-300">
+              <a
+                href={`tel:${num.replace(/\s/g, "")}`}
+                className="hover:text-leafGreen transition duration-300"
+              >
                 {num}
               </a>
             </p>
           ))}
 
           <p className="text-sm mb-2 flex items-center gap-2">
-            <FaPhoneAlt style={{ color: colors.leafGreen }} /> Owner: Gautam Kumar
+            <FaPhoneAlt style={{ color: colors.leafGreen }} /> Owner: Gautam
+            Kumar
           </p>
 
           <div className="mb-4 flex justify-start items-center">
@@ -206,7 +242,10 @@ export default function Footer() {
       {/* Bottom Section */}
       <div className="mt-12 text-center text-xs text-whitePure border-t border-gray-400 pt-6 space-y-2 relative z-10">
         <VisitorCounter />
-        <p>© {new Date().getFullYear()} Gautam Bamboo Chick Maker. All rights reserved.</p>
+        <p>
+          © {new Date().getFullYear()} Gautam Bamboo Chick Maker. All rights
+          reserved.
+        </p>
         <p>
           Designed by{" "}
           <a
