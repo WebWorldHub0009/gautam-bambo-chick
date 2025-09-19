@@ -33,7 +33,7 @@ const colors = {
 const navItems = [
   { name: "Home", path: "/", icon: <FaHome /> },
   { name: "About", path: "/about", icon: <FaInfoCircle /> },
-  { name: "Services", path: "/services", icon: <FaTruckMoving /> },
+  { name: "Products", path: "/products", icon: <FaTruckMoving /> },
   { name: "Gallery", path: "/gallery", icon: <FaEnvelope /> },
   { name: "Contact", path: "/contact", icon: <FaPhoneAlt /> },
 ];
@@ -88,7 +88,7 @@ const ModernNavbar = () => {
             <p className="flex items-center gap-1">
               <FaIdBadge style={{ color: colors.orangeGold }} />
               <a href="#" style={{ color: colors.whitePure }}>
-                UP-28-0178874
+               UDYAM-UP-28-0178874
               </a>
             </p>
             <p className="flex items-center gap-1">

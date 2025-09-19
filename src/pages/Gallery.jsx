@@ -103,7 +103,7 @@ const Showcase = () => {
       {/* Gallery */}
       <section
         id="gallery-section"
-        className="relative bg-gradient-to-b from-white via-[#fdfdfd] to-[#fafafa] px-4 md:px-10 py-16 font-[Poppins]"
+        className="relative bg-gradient-to-b from-white via-[#fdfdfd] to-[#fafafa] px-4 md:px-10 py-8 font-[Poppins]"
       >
         {/* Section Heading */}
         <div className="text-center max-w-4xl mx-auto mb-10">

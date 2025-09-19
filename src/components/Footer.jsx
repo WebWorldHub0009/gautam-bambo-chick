@@ -152,7 +152,7 @@ export default function Footer() {
 
           {/* Emails */}
           <div className="mt-6">
-            <h5 className="text-xl font-semibold mb-2" style={{ color: colors.orangeGold }}>
+            <h5 className="text-3xl font-semibold mb-2" style={{ color: colors.orangeGold,fontFamily: "'Italiana', serif" }}>
               Email
             </h5>
             {[

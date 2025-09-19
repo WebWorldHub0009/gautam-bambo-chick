@@ -6,43 +6,90 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper/modules";
 
+// 🎨 Brand Colors
+const colors = {
+  deepBlue: "#234A8A",
+  brightRed: "#E8452D",
+  leafGreen: "#2BA44A",
+  darkGreen: "#00733B",
+  orangeGold: "#F4A300",
+  blackPure: "#000000",
+  whitePure: "#FFFFFF",
+};
+
+// 🌿 Fresh Testimonials for Bamboo Chick Maker
 const testimonials = [
-  { name: "Amit Khanna", title: "Apartment Owner, Delhi", text: "Quick Provide Pest Control handled our termite issue with amazing precision. Highly professional and reliable service!" },
-  { name: "Ritika Sen", title: "Café Owner, Mumbai", text: "Their eco-friendly cockroach treatment worked wonders in our café. Safe, quick, and zero downtime." },
-  { name: "Dr. Manish Suri", title: "Clinic Owner, Lucknow", text: "Mosquitoes around my clinic were a big issue. Their team resolved it completely. Very satisfied!" },
-  { name: "Shreya Gupta", title: "Interior Designer, Gurgaon", text: "I love how safe their pest control is. No chemical smell, safe for kids and pets — and highly effective." },
-  { name: "Rajiv Bansal", title: "Hotel Manager, Jaipur", text: "Guests at our hotel now enjoy a hygienic stay. Their team was quick, discreet, and professional." },
-  { name: "Neha Sharma", title: "Teacher, Chandigarh", text: "Affordable and effective service. They gave us peace of mind at home. Highly recommended!" },
-  { name: "Sandeep Yadav", title: "Shop Owner, Pune", text: "Rats were troubling our store badly. Their rodent control service worked perfectly and results are long-lasting." },
-  { name: "Meenal Desai", title: "Boutique Owner, Ahmedabad", text: "They handled my boutique with utmost care — pest-free environment without harming fabrics." },
-  { name: "Arjun Reddy", title: "Student, Bangalore", text: "Our PG had a bedbug nightmare. Their treatment worked so well — I finally sleep peacefully again." },
-  { name: "Pooja Verma", title: "Restaurant Owner, Hyderabad", text: "Kitchen-safe pest control that saved us from cockroaches. Excellent team and results." },
-  { name: "Vivek Chawla", title: "IT Professional, Noida", text: "Very thorough inspection and effective ant treatment. Their staff was polite and efficient." },
-  { name: "Ananya Iyer", title: "HR Head, Kolkata", text: "We trust Quick Provide Pest Control for all our office needs. Consistent and dependable service!" },
+  {
+    name: "Anil Mehra",
+    title: "Homeowner, Jaipur",
+    text: "The bamboo chicks gave my home a natural cooling effect. Perfect blend of beauty and eco-friendliness!",
+  },
+  {
+    name: "Simran Kaur",
+    title: "Interior Designer, Delhi",
+    text: "Their bamboo blinds added warmth and elegance to my project. My clients were amazed by the craftsmanship.",
+  },
+  {
+    name: "Rahul Verma",
+    title: "Café Owner, Chandigarh",
+    text: "I wanted a rustic, earthy vibe for my café. Their bamboo products transformed the space completely!",
+  },
+  {
+    name: "Priya Nair",
+    title: "Architect, Bangalore",
+    text: "We used their bamboo solutions for a sustainable project — lightweight, durable, and simply stunning.",
+  },
+  {
+    name: "Arvind Sharma",
+    title: "Resort Owner, Rishikesh",
+    text: "Guests love the natural feel of bamboo shades. It adds charm while keeping the interiors cool.",
+  },
+  {
+    name: "Neha Patel",
+    title: "Teacher, Ahmedabad",
+    text: "Affordable, eco-conscious, and stylish! Their bamboo chicks brought a fresh, airy look to my classroom.",
+  },
 ];
 
 export default function TestimonialSlider() {
   return (
-    <section className="relative w-full py-14 bg-gradient-to-b from-white via-[#F9FAFB] to-[#EEF7F2] px-4 md:px-10 font-[Raleway] overflow-hidden">
+    <section className="relative w-full py-14 bg-gradient-to-b from-white via-[#FDFDFD] to-[#F7F7F7] px-4 md:px-10 font-[Raleway] overflow-hidden">
       {/* ✨ Background Overlays */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#3CB371]/10 via-transparent to-[#003366]/10"></div>
-        <div className="absolute top-10 right-20 w-64 h-64 bg-[#3CB371]/25 blur-3xl rounded-full animate-pulse"></div>
-        <div className="absolute bottom-10 left-20 w-72 h-72 bg-[#003366]/15 blur-2xl rounded-full animate-pulse"></div>
+        <div
+          className="absolute top-0 left-0 w-full h-full"
+          style={{
+            background: `linear-gradient(90deg, ${colors.leafGreen}20, transparent, ${colors.deepBlue}20)`,
+          }}
+        ></div>
+        <div
+          className="absolute top-10 right-20 w-64 h-64 blur-3xl rounded-full animate-pulse"
+          style={{ backgroundColor: `${colors.leafGreen}40` }}
+        ></div>
+        <div
+          className="absolute bottom-10 left-20 w-72 h-72 blur-2xl rounded-full animate-pulse"
+          style={{ backgroundColor: `${colors.deepBlue}25` }}
+        ></div>
       </div>
 
-      {/* Heading */}
+      {/* 🌟 Heading */}
       <div className="relative max-w-6xl mx-auto text-center mb-16 z-10">
-        <h2 className="text-3xl md:text-5xl font-extrabold text-[#003366] drop-shadow-sm">
-          What Our Clients <span className="text-red-600">Say About Us</span>
+        <h2
+          className="text-3xl md:text-5xl font-bold drop-shadow-sm"
+          style={{ fontFamily: "Italiana, serif", color: colors.deepBlue }}
+        >
+          What Our <span style={{ color: colors.orangeGold }}>Clients Say</span>
         </h2>
-        <p className="italic text-[#4A4A4A] mt-4 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
-          “Trusted across India for safe, eco-friendly, and reliable pest control services —
-          keeping your homes and businesses completely pest-free.”
+        <p
+          className="italic mt-4 text-base md:text-lg max-w-3xl mx-auto leading-relaxed"
+          style={{ fontFamily: "Orbitron, sans-serif", color: colors.blackPure }}
+        >
+          “Trusted for generations to deliver eco-friendly bamboo solutions —
+          bringing style, tradition, and sustainability to every space.”
         </p>
       </div>
 
-      {/* Swiper Slider */}
+      {/* 🌿 Swiper Slider */}
       <Swiper
         modules={[Pagination, Autoplay]}
         pagination={{ clickable: true }}
@@ -63,16 +110,37 @@ export default function TestimonialSlider() {
               hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
             >
               {/* Floating Badge */}
-              <span className="absolute -top-5 left-5 bg-blue-800 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+              <span
+                className="absolute -top-5 left-5 text-xs font-bold px-3 py-1 rounded-full shadow-md"
+                style={{
+                  backgroundColor: colors.darkGreen,
+                  color: colors.whitePure,
+                  fontFamily: "Zen Dots, sans-serif",
+                }}
+              >
                 ★ Verified Client
               </span>
 
-              <FaQuoteLeft className="text-3xl mb-4 text-blue-800" />
-              <p className="mb-6 italic text-gray-700 leading-relaxed">
+              <FaQuoteLeft
+                className="text-3xl mb-4"
+                style={{ color: colors.deepBlue }}
+              />
+              <p
+                className="mb-6 italic leading-relaxed"
+                style={{
+                  fontFamily: "Orbitron, sans-serif",
+                  color: "#555555",
+                }}
+              >
                 "{item.text}"
               </p>
               <div>
-                <p className="font-semibold text-lg text-[#003366]">{item.name}</p>
+                <p
+                  className="font-semibold text-lg"
+                  style={{ color: colors.leafGreen }}
+                >
+                  {item.name}
+                </p>
                 <p className="text-sm text-gray-500">{item.title}</p>
               </div>
             </div>
