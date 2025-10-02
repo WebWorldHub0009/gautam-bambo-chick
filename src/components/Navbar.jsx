@@ -98,7 +98,7 @@ const ModernNavbar = () => {
 
   {/* Mobile View: Phones left/right (second row) */}
   <div className="flex justify-between w-full sm:w-auto">
-    {["+919315393747", "+917838788389"].map((phone, idx) => (
+    {["+91 9315393747"].map((phone, idx) => (
       <p key={idx} className="flex items-center gap-1 text-[10px] sm:text-sm">
         <FaPhoneAlt style={{ color: colors.brightRed }} />
         <a href={`tel:${phone}`} style={{ color: colors.whitePure }}>

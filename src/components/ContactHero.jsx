@@ -50,7 +50,7 @@ export default function ContactHero() {
         {/* Contact Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
           <a
-            href="tel:+919811367632"
+            href="tel:+919315393747"
             className="w-full sm:w-auto px-6 py-3 rounded-full font-semibold shadow-lg text-center transition-all"
             style={{
               backgroundColor: colors.leafGreen,
