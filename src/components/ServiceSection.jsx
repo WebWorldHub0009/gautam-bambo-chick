@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import bambooJafhari from "../assets/product/jaf.jpg";
 import dwali from "../assets/product/dchick.jpg"
 import kabutar from "../assets/product/pigeon.jpg"
-import roller from "../assets/product/pigeon.jpg"
+import roller from "../assets/home/bh2.jpg"
 import bambo from "../assets/product/hut.jpg"
 import fchick from "../assets/product/fchick.jpg"
 import bg from "../assets/home/sbg.jpg";

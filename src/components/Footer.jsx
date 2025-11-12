@@ -79,7 +79,7 @@ export default function Footer() {
               ["https://www.instagram.com", FaInstagram],
               ["https://www.facebook.com", FaFacebookF],
               [
-                "https://api.whatsapp.com/send/?phone=919815397632&text=Hello%20Gautam%20Bamboo%20Chick%20Maker",
+                "https://api.whatsapp.com/send/?phone=919315393747&text=Hello%20Gautam%20Bamboo%20Chick%20Maker",
                 FaWhatsapp,
               ],
             ].map(([url, Icon], i) => (

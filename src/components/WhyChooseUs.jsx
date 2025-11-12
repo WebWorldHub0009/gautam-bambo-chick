@@ -132,7 +132,7 @@ const WhyChooseUs = () => {
           <h2 className="text-4xl sm:text-5xl font-extrabold tracking-wide">
             Why Choose{" "}
             <span style={{ color: colors.leafGreen }}>
-              Gaurav Bamboo Chick Maker?
+              Gautam Bamboo Chick Maker?
             </span>
           </h2>
           <p className="text-sm sm:text-base text-gray-600 mt-4 max-w-2xl mx-auto">

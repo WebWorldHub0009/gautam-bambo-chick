@@ -14,11 +14,11 @@ import {
 } from "react-icons/fa";
 
 import img1 from "../assets/home/b1.jpg";
-import img2 from "../assets/home/b2.jpg";
-import img3 from "../assets/home/b3.jpg";
+import img2 from "../assets/home/bbh6.jpg";
+import img3 from "../assets/home/bbh4.jpg";
 import img4 from "../assets/home/b4.jpg";
-import img5 from "../assets/product/d1.jpg";
-import img6 from "../assets/product/d2.jpg";
+import img5 from "../assets/home/bh1.jpg";
+import img6 from "../assets/home/bh3.jpg";
 import { Link } from "react-router-dom";
 
 const colors = {
